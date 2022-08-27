@@ -1,0 +1,4 @@
+- Để tăng tốc độ làm việc bạn có thể cấu hình **Build Proxy** 
+- Phát phim bằng tổ hợp phím **ALT + A **
+- ctrl + click để đặt một điểm theo dõi
+- Điểm theo dõi (tracking) có 2 vùng chính, 1 là vùng mẫu, 2 là  vùng tìm kiếm (search) vung search sẽ được dùng để tìm đối tượng ở những khung hình sau

@@ -1,0 +1,27 @@
+- get pyenv : https://github.com/pyenv/pyenv
+- install python by version: pyenv install 2.7.8/3.6.6
+- $ pyenv virtualenv 3.7.1 (env-name)
+- $ pyenv local (env-name)
+- $ cat .python-version
+
+##Start Django
+- $pip install django
+
+##Start app
+- $python manage.py startapp polls
+- create model
+- add app to app install in settings
+- register model to admin of polls
+- $python manage.py makemigrations
+- $python manage.py migration
+- $python manage.py create supperuser
+
+##Create new view in app:
+-Create view in views
+-Add urls
+
+##Three ways to validate model:
+-clean_attribute() from forms
+-clean_attribute() from model
+-validate(), validator inside models → need to makemigrations
+use validates.py to import

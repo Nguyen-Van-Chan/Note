@@ -1,0 +1,5 @@
+import numpy as np
+
+
+a =np.load("/Users/maido/OneDrive - Oxford Brookes University/Autonomous Car/pointclouds/pointcloud_30.npy")
+a.astype('float32').tofile('file30.bin')

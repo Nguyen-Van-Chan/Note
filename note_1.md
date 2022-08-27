@@ -1,0 +1,1 @@
+- Để tăng tốc độ làm việc bạn có thể cấu hình **Build Proxy** 
