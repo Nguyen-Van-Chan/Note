@@ -40,7 +40,8 @@
 		
 - Tới đây, có bạn sẽ ồ lên kinh ngạc: “À, ra vậy”. Đây là cách ta áp dụng các bước trên để rút gọn 1 lambda expression.
 
-////image
+   <img width="311" alt="image" src="https://user-images.githubusercontent.com/42131590/196596545-2d564d17-b633-4339-aabd-8e6f6da53fdc.png">
+
 
 - Cũng có bạn sẽ thắc mắc: Ớ, tưởng lambda expression là gì ghê gớm chứ, hóa ra đơn giản thế thôi à.
  Vâng, vì nó đơn giản thế nên nhiều bạn sử dụng nó mà không biết tên gọi cũng như chính xác nó là gì.
