@@ -51,7 +51,7 @@
 
 - Do đó, ta sử dụng lambda expression để truyền 1 anonymous function vào hàm Where hoặc First. Ví dụ, khi dùng hàm Where của LINQ để tìm những phần tử trong 1 mảng:
 
-var studentList = new List<Student>();
+		var studentList = new List<Student>();
  
 		//Thứ đẹp đẽ ngắn gọn này là lambda expression
 		var students = studentList.Where(stu => stu.Age > 20);

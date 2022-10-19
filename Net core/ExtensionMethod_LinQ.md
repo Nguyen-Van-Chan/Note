@@ -3,7 +3,7 @@
 - Ngày trước, khi khai báo 1 biến, chúng ta phải khai báo type của biến đó (Ở đây là stream).
 
         Stream stream = new FileStream("C:\\abc.txt", FileMode.CreateNew);
-        
+
 - Tuy nhiên, với từ khóa var, chúng ta có thể khai báo biến mà không cần quan tâm đến type. Các chức năng nhắc lệnh vẫn được thực hiện bình thường.
 
         var stream = new FileStream("C:\\abc.txt", FileMode.CreateNew);
@@ -29,6 +29,7 @@
         }
 
 - Với C#, khi ta khai báo 1 auto-property, ngôn ngữ sẽ tự tạo 1 field private, gettter và setter cho field đó. Ta còn có thể set private cho getter và setter đó. Code mới như sau:
+
         public string Name { get; set; }       
         public string Name { get; private set; } //Field is read only, private setter
 
@@ -77,7 +78,9 @@ Ngày xửa ngày xưa,khi chưa có using, mỗi khi muốn đóng 1 stream, co
         input = input != null ? input : "default";
 
 - Với C#, ta có toán tử null, giúp code ngắn hơn và dễ đọc hơn
+
         input = input ?? "default"; //Nếu index là null thì set bằng default
+
 - Việc implement một toán tử nhỏ nhặt thế này trong ngôn ngữ cho thấy các bạn developer của Microsoft rất biết suy nghĩ cho giới developer chúng ta.
 
 ## Khởi tạo object và collection
@@ -88,7 +91,9 @@ Ngày xửa ngày xưa,khi chưa có using, mỗi khi muốn đóng 1 stream, co
         student.Age = 10;
 
 - Với C#, mọi chuyện trở nên đơn giản ngắn gọn hơn
+
         Student student = new Student { Name = "Hoang", Age = 10};
+
 - Có thể bạn sẽ hỏi: Tại sao không tạo constructor cho object, cũng vậy thôi mà. Mình xin trả lời: Khi tạo constructor, ta phải khai báo toàn tham số truyền vào. Với cách này, ta có thể truyền vào số lượng tham số ta muốn (Ví dụ object student có 10 fields, ta chỉ muốn set 2 fields).
 - Tiếp theo là khởi tạo 1 collection, cách thông thường và cách C#. Cách nào ngắn gọn, dễ hiểu hơn các bạn tự thấy nhỉ.
 
@@ -110,12 +115,15 @@ Ngày xửa ngày xưa,khi chưa có using, mỗi khi muốn đóng 1 stream, co
 ## Extension method
 - Có 1 số trường hợp, ta muốn thêm method cho một số class sealed, hoặc class từ các library khác. Với một số ngôn ngữ, điều này là ko thể được, nhưng với C#, chúng ta có thể dùng extension method.
 VD ở đây, chúng ta có class Student từ library khác, không thể sửa code. Ta muốn thêm method Print.
+
         public class Student
         {
             public string Name { get; set; }
             public int Age { get; set; }
         }
+
 - Chúng ta tạo 1 extenstion class, class này phải là static class, method cũng phải static, params đầu tiên truyền vào là class cần extention, với từ khóa this.
+
         public static class StudentExtension
         {
         public static void Print(this Student student)
@@ -126,16 +134,19 @@ VD ở đây, chúng ta có class Student từ library khác, không thể sửa
         //Sử dụng
         var student = new Student();
         student.Print();
+
 - Trong quá trình tìm hiểu, bạn sẽ thấy extension method rất hữu dụng. (Nói nhỏ nữa là trong Java không có cái extension method này đâu hen).
 
 ## LINQ
 - Linq khá dễ sử dụng, nhưng để hiểu nó cần biết về Predicate, Func, lambda v…v, mình sẽ dành 1 bài viết để nói rõ hơn. Ở đây mình chỉ giới thiệu sợ, vì sao nó hay.
 - Ngày xưa, khi chưa có linq, giả sử ta muốn tìm những học sinh có tuổi <20 trong list, ta cần viết code dài như sau:
+
         var studentsUnder20 = new List<Student>();
         foreach (var student in students)
         {
             if (student.Age < 20) studentsUnder20.Add(student);
         }
+        
 - Ngày nay, với linq, ta chỉ cần đúng 1 dòng code:
 
         var studentsUnder20 = students.Where(student => student.Age < 20);
