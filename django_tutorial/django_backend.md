@@ -64,7 +64,7 @@ polls/
 - nginx webserver, proxy, cân bằng tải
 - redis cơ sở dữ liệu trên ram cache. OTP tồn tại 60s sử dụng redis 
 - db: 
-    - backup + restore https://github.com/sonnhfit/mynote/blob/master/load_sql_docker.MD](https://github.com/Nguyen-Van-Chan/Note/blob/main/load_sql_docker.MD
+    - backup + restore https://github.com/Nguyen-Van-Chan/Note/blob/main/load_sql_docker.MD
 
 - celery: lập lịch, bất đồng bộ, task chạy ẩn 
 
